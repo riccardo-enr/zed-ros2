@@ -1,0 +1,5 @@
+name = "ROS 2 URDF"
+grammar = "xml"
+path_suffixes = ["urdf", "xacro", "sdf"]
+line_comments = ["<!-- "]
+block_comment = ["<!-- ", " -->"]

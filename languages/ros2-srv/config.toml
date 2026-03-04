@@ -1,0 +1,4 @@
+name = "ROS 2 Service"
+grammar = "ros2_interface"
+path_suffixes = ["srv"]
+line_comments = ["# "]

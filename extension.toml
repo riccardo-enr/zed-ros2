@@ -1,0 +1,15 @@
+id = "ros2"
+name = "ROS 2"
+schema_version = 1
+version = "0.1.0"
+authors = ["Riccardo Enr <riccardo-enr@users.noreply.github.com>"]
+description = "ROS 2 support for Zed: syntax highlighting for .msg, .srv, .action, launch XML, and URDF/Xacro files"
+repository = "https://github.com/riccardo-enr/zed-ros2"
+
+[grammars.ros2_interface]
+repository = "https://github.com/riccardo-enr/tree-sitter-ros2-interface"
+rev = ""
+
+[language_servers.ros2-language-server]
+name = "ROS 2 Language Server"
+languages = ["ROS 2 Message", "ROS 2 Service", "ROS 2 Action"]

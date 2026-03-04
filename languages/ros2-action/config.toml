@@ -1,0 +1,4 @@
+name = "ROS 2 Action"
+grammar = "ros2_interface"
+path_suffixes = ["action"]
+line_comments = ["# "]

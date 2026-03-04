@@ -1,0 +1,4 @@
+name = "ROS 2 Message"
+grammar = "ros2_interface"
+path_suffixes = ["msg"]
+line_comments = ["# "]
