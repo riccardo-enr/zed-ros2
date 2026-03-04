@@ -1,5 +1,4 @@
 name = "ROS 2 Launch XML"
 grammar = "xml"
 path_suffixes = ["launch.xml", "launch"]
-line_comments = ["<!-- "]
 block_comment = ["<!-- ", " -->"]

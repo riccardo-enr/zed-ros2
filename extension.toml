@@ -10,3 +10,8 @@ repository = "https://github.com/riccardo-enr/zed-ros2"
 repository = "https://github.com/riccardo-enr/tree-sitter-ros2-interface"
 rev = "9b2f6ad4b87697457a939f7205c8ab9569a4b60e"
 
+[grammars.xml]
+repository = "https://github.com/tree-sitter-grammars/tree-sitter-xml"
+path = "xml"
+rev = "5000ae8f22d11fbe93939b05c1e37cf21117162d"
+

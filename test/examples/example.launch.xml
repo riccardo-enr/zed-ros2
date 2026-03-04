@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Launch arguments -->
+  <arg name="use_sim_time" default="false" description="Use simulation time"/>
+  <arg name="robot_name" default="my_robot"/>
+
+  <!-- Set environment variable -->
+  <set_env name="ROS_DOMAIN_ID" value="42"/>
+
+  <!-- Local variable -->
+  <let name="robot_ns" value="/$(var robot_name)"/>
+
+  <!-- Include another launch file -->
+  <include file="$(find-pkg-share my_robot_description)/launch/description.launch.xml">
+    <arg name="use_sim_time" value="$(var use_sim_time)"/>
+  </include>
+
+  <!-- Launch a ROS 2 node -->
+  <group>
+    <node pkg="my_robot_driver" exec="driver_node" name="driver" namespace="$(var robot_ns)" output="screen">
+      <param name="wheel_radius" value="0.05"/>
+      <param name="max_speed" value="1.0"/>
+      <remap from="cmd_vel" to="$(var robot_ns)/cmd_vel"/>
+    </node>
+  </group>
+
+  <!-- Conditional node -->
+  <node pkg="rviz2" exec="rviz2" name="rviz" if="$(var use_sim_time)"/>
+</launch>

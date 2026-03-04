@@ -1,19 +1,31 @@
 ; ROS 2 Launch XML highlights
-; Inherits XML grammar — highlights ROS-specific elements
+; Inherits tree-sitter-xml grammar
 
-(element
-  (start_tag
-    (tag_name) @tag))
+;; Tags
+(STag (Name) @tag)
+(ETag (Name) @tag)
+(EmptyElemTag (Name) @tag)
 
-(element
-  (self_closing_tag
-    (tag_name) @tag))
+;; Attributes
+(Attribute (Name) @property)
+(Attribute (AttValue) @string)
 
-(attribute
-  (attribute_name) @attribute)
+;; Delimiters
+[
+  "<" ">"
+  "</" "/>"
+] @punctuation.delimiter
 
-(attribute
-  (attribute_value) @string)
+[ "=" ] @operator
 
-(comment) @comment
-(text) @string
+;; Text & comments
+(CharData) @string
+(Comment) @comment
+
+;; Entities
+(EntityRef) @constant
+(CharRef) @constant
+
+;; XML declaration
+"xml" @keyword
+[ "version" "encoding" ] @property
