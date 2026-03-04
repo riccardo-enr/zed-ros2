@@ -10,6 +10,3 @@ repository = "https://github.com/riccardo-enr/zed-ros2"
 repository = "https://github.com/riccardo-enr/tree-sitter-ros2-interface"
 rev = "9b2f6ad4b87697457a939f7205c8ab9569a4b60e"
 
-[language_servers.ros2-language-server]
-name = "ROS 2 Language Server"
-languages = ["ROS 2 Message", "ROS 2 Service", "ROS 2 Action"]
