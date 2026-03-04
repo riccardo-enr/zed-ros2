@@ -1,11 +1,16 @@
-; ROS 2 Service highlights — same grammar as .msg
-; TODO: Update queries once grammar is built
+; ROS 2 Interface highlights (shared by .msg, .srv, .action)
 
 (comment) @comment
 
-(type) @type
+(builtin_type) @type.builtin
+(message_name) @type
+(namespaced_type) @type
+
 (field_name) @variable
+(constant_name) @constant
+
 (separator) @punctuation.delimiter
-(default_value) @constant
-(package_name) @namespace
-(array_modifier) @type.qualifier
+(array_modifier) @punctuation.bracket
+
+(default_value) @string
+(constant_value) @string

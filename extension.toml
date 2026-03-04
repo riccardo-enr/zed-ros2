@@ -8,7 +8,7 @@ repository = "https://github.com/riccardo-enr/zed-ros2"
 
 [grammars.ros2_interface]
 repository = "https://github.com/riccardo-enr/tree-sitter-ros2-interface"
-rev = ""
+rev = "9b2f6ad4b87697457a939f7205c8ab9569a4b60e"
 
 [language_servers.ros2-language-server]
 name = "ROS 2 Language Server"
